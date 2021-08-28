@@ -2,8 +2,42 @@ body {
     width: 100%;
     margin: 0;
     background-color: black;
-    color: peru;
-    padding: 8% 0;    
+    color: peru;  
+}
+
+.header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding: 2%;
+    background-color: rgba(41, 26, 11, 0.3);
+    box-shadow: 3px 3px rgba(41, 26, 11, 0.5);
+}
+
+.logo {
+    box-sizing: border-box;
+    align-items: baseline;
+    padding: 5px;
+    position: relative;
+}
+
+.logo-img {
+    width: 45px;
+    height: auto;
+    position: absolute;
+    top: -4px;
+    left: 18px;
+}
+
+.logo-text {
+    z-index: 10;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.container {
+    margin-top: 10%;
 }
 
 h1 { text-align: center; }
@@ -19,35 +53,43 @@ h1 { text-align: center; }
     width: 600px;
     height: 300px;
     margin: 0 auto;
-    padding: 2%;
     box-sizing: border-box;
 }
 
 .sound_display {
     flex: 1;
+    border-radius: 5px;
 }
 
 .btn {
-    border-radius: 3px;
     border: none;
-    width: 32px;
-    height: 32px;
-    padding-top: 4px;
+    width: 45px;
+    height: 45px;
     background-color: peru;
+    border-radius: 100%;
     margin: 2%;
+}
+
+.btn:last-child {
+    margin-right: auto;
+}
+
+.btn:first-child {
+    margin-left: auto;
 }
 
 .action {
     width: 100%;
-    height: auto;
-    align-items: baseline;
+    height: 100%;
 }
 
 .group_btn {
     display: flex;
-    width: 200px;
+    width: 300px;
     margin: 20px auto;
     align-items: baseline;
+    border-radius: 5px;
+    background-color: rgba(29, 29, 29, 0.65);
 }
 
 .btn:hover {
@@ -56,16 +98,35 @@ h1 { text-align: center; }
 }
 
 @media screen and (max-width: 667px) {
-    .bar {
-        margin: 3px;
+
+    .div {
+        width: 100%;
+        height: fit-content;
     }
+
+    .equalizer {
+        width: 100%;
+        margin: 0;
+    }
+
     .group_btn {
-        flex-direction: column;
         width: 80%;
         margin: 30px auto;
+        box-sizing: border-box;
+        border: 1px solid red;
     }
+
     .btn {
-        width: 100%;
-        margin: 3% 0;
+        width: 32px;
+        height: 32px;
     }
+
+    .btn:first-child {
+        margin-left: auto;
+    }
+
+    .btn:last-child {
+        margin-right: auto;
+    }
+
 }
