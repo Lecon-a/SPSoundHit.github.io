@@ -8,7 +8,7 @@ button[0].addEventListener("click", playAudio);
 button[1].addEventListener("click", pauseAudio);
 button[2].addEventListener("click", darkM);
 //var audio = new Audio("sounds/audio1.mp3");//check out how to implement audio of any format in javascript
-var audio = new Audio("sounds/audio2.mkv");//check out how to implement audio of any format in javascript
+var audio = new Audio("sounds/audio1.mp3");//check out how to implement audio of any format in javascript
 
 function playAudio() {
     //window.focus();
