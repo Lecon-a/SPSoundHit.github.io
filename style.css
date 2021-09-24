@@ -1,25 +1,36 @@
+/* 
+    Up Main Section rule
+*/
 body {
     width: 100%;
     margin: 0;
     background-color: black;
-    color: peru;  
+    color: peru;
+    contain: content;
+    box-sizing: border-box;
+    overflow-y: hidden;
 }
 
 .header {
     position: fixed;
+    display: flex;
+    flex-direction: row;
     right: 0;
     left: 0;
     top: 0;
     padding: 2%;
+    align-items: baseline;
     background-color: rgba(41, 26, 11, 0.3);
     box-shadow: 3px 3px rgba(41, 26, 11, 0.5);
+    box-sizing: border-box;
 }
 
 .logo {
-    box-sizing: border-box;
+    cursor: none;
     align-items: baseline;
     padding: 5px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .logo-img {
@@ -36,6 +47,59 @@ body {
     font-family: cursive;
 }
 
+.nav {
+    width: 20%;
+    margin: 0 7% 0 auto;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar_item {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar_item a {
+    margin: 0;
+    flex: 1;
+    padding: 4px;
+    text-decoration: none;
+    color: peru;
+    box-sizing: border-box;
+}
+
+.navbar_item a:hover {
+    cursor: pointer;
+    color: rgb(210, 216, 155);
+    border-bottom: 2px solid peru;
+    box-sizing: border-box;
+}
+
+.profile {
+    cursor: none;
+    position: absolute;
+    right: 2%;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    contain: content;
+    box-sizing: border-box;
+}
+
+.profile_image {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
 .container {
     margin-top: 10%;
 }
@@ -44,20 +108,178 @@ h1 { text-align: center; }
 
 .div {
     padding: .5% 1%;
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
 
 .equalizer {
     display: flex;
-    width: 600px;
+    flex-direction: row;
+    width: 100%;
     height: 300px;
     margin: 0 auto;
+    contain: content;
     box-sizing: border-box;
 }
 
-.sound_display {
+
+
+
+
+
+
+
+
+/* 
+    Responsiveness rules defined
+*/
+
+@media screen and (max-width: 376px) {
+    
+    .header{
+        padding: 5%;
+    }
+
+    .nav {
+        margin-right: 30%;
+    }
+
+    .profile {
+        right: 7%;
+    }
+
+    .container {
+        margin-top: 20%;
+    }
+
+    .div {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .equalizer {
+        width: 100%;
+        margin: 0;
+    }
+
+    .equalizer_side {
+        flex: 0;
+    }
+
+    .sound_display {
+        width: 100%;
+    }
+
+    .group_btn {
+        width: 80%;
+        margin: 30px auto;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .btn:first-child {
+        margin-left: auto;
+    }
+
+    .btn:last-child {
+        margin-right: auto;
+    }
+
+    .footer {
+        padding: 4%;
+    }
+}
+
+@media screen and (min-width: 667px) {
+
+    body {
+        overflow-y: scroll;
+        box-sizing: border-box;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 100;
+    }
+
+    .nav {
+        margin-right: 10%;
+    }
+
+    .profile {
+        right: 5%;
+    }
+
+    .container {
+        margin-top: 12%;
+    }
+
+    .div {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .equalizer {
+        width: 100%;
+        margin: 0;
+    }
+
+    .equalizer_side {
+        flex: 0;
+    }
+
+    .sound_display {
+        width: 100%;
+    }
+
+    .group_btn {
+        width: 80%;
+        margin: 30px auto;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .btn:first-child {
+        margin-left: auto;
+    }
+
+    .btn:last-child {
+        margin-right: auto;
+    }
+
+    .footer {
+        padding: 2%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* 
+    Main rule
+ */
+
+
+.equalizer_side {
     flex: 1;
+}
+
+.sound_display {
+    flex: 3;
     border-radius: 5px;
 }
 
@@ -89,7 +311,7 @@ h1 { text-align: center; }
     margin: 20px auto;
     align-items: baseline;
     border-radius: 5px;
-    background-color: rgba(29, 29, 29, 0.65);
+    background-color: rgba(199, 121, 121, 0.65);
 }
 
 .btn:hover {
@@ -97,36 +319,10 @@ h1 { text-align: center; }
     cursor: pointer;
 }
 
-@media screen and (max-width: 667px) {
-
-    .div {
-        width: 100%;
-        height: fit-content;
-    }
-
-    .equalizer {
-        width: 100%;
-        margin: 0;
-    }
-
-    .group_btn {
-        width: 80%;
-        margin: 30px auto;
-        box-sizing: border-box;
-        border: 1px solid red;
-    }
-
-    .btn {
-        width: 32px;
-        height: 32px;
-    }
-
-    .btn:first-child {
-        margin-left: auto;
-    }
-
-    .btn:last-child {
-        margin-right: auto;
-    }
-
+.footer {
+    text-align: center;
+    padding: 5px 2%;
+    font-family: cursive;
+    font-size: small; 
+    box-sizing: border-box;
 }
